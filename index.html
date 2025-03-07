@@ -27,10 +27,11 @@
               <div class="to-in">
                 <label for="input" class="input-lable">Cerrently typing</label>
                 <input type="text" id="input">
+                
               </div>
           </div>
           <div class="toDoList-in-result">
-              <ul>
+              <ul id="lisHome">
                 <li>
                   <div class="resul-in">
                     <div class="chec op">
@@ -45,7 +46,7 @@
           </div>
           <div class="toDoList-in-menu">
               <div class="menu-right">
-                  <div class="haveResult">5 items Left</div>
+                  <div class="haveResult"><div id="itemLeft"></div> items Left</div>
               </div>
               <div class="menu-centr">
                   <ul>
@@ -65,7 +66,8 @@
               </div>
           </div>
       </div>
-      <div class="futer-lable">Drag and drop to reorder list made by Aziz Mardonqulov</div>
+      <div style="margin-bottom: 1rem;" class="futer-lable">Drag and drop to reorder list made by Aziz Mardonqulov</div>
+      <p id="eror" style="color: red; text-align: center; font-size: 20px;"></p>
   </div>
 </div>
   <script src="./mean.js"></script>
