@@ -8,6 +8,16 @@ let all = document.getElementById("all");
 let active = document.getElementById("active");
 let comp = document.getElementById("comp");
 let CLearAll = document.getElementById("CLearAll");
+let sun = document.getElementById("sun");
+let moon = document.getElementById("moon");
+let haderBg = document.getElementById("haderBg");
+let toDoListInput = document.getElementById("toDoListInput");
+let hader = document.getElementById("hader");
+let toDoListMenu = document.getElementById("toDoListMenu");
+let menuItems1 = document.querySelector(".one")
+let menuItems2 = document.querySelector(".two")
+let menuItems3 = document.querySelector(".three")
+let haveResult = document.getElementById("haveResult");
 function updateItemCount() {
     let itemLeftIn = document.querySelectorAll(".rent");
     itemLeft.innerHTML = itemLeftIn.length;
@@ -77,7 +87,7 @@ window.addEventListener("keypress", function (event) {
 active.addEventListener("click", function () {
     all.classList.remove("active");
     active.classList.add("active");
-    comp.c*lassList.remove("active");
+    comp.classList.remove("active");
 
     document.querySelectorAll("#lisHome li").forEach((li) => {
         if (li.classList.contains("rent")) {
@@ -115,3 +125,33 @@ CLearAll.addEventListener("click", function () {
     ul.innerHTML = "";
     updateItemCount();
 });
+sun.addEventListener("click" , function(){
+    sun.classList.remove("visiball");
+    moon.classList.add("visiball");
+    haderBg.classList.add("sunLight")
+    toDoListInput.classList.add("light")
+    hader.classList.add("hader-bac");
+    ul.classList.add("li-Light-Bac")
+    toDoListMenu.classList.add("li-Light-Bac")
+    menuItems1.classList.add("colorItem")
+    menuItems2.classList.add("colorItem")
+    menuItems3.classList.add("colorItem")
+    itemLeft.classList.add("colorItem")
+    CLearAll.classList.add("colorItem")
+    haveResult.classList.add("colorItem")
+})
+moon.addEventListener("click" , function(){
+    sun.classList.add("visiball");
+    moon.classList.remove("visiball");
+    haderBg.classList.remove("sunLight")
+    toDoListInput.classList.remove("light")
+    hader.classList.remove("hader-bac");
+    ul.classList.remove("li-Light-Bac")
+    toDoListMenu.classList.remove("li-Light-Bac")
+    menuItems1.classList.remove("colorItem")
+    menuItems2.classList.remove("colorItem")
+    menuItems3.classList.remove("colorItem")
+    itemLeft.classList.remove("colorItem")
+    CLearAll.classList.remove("colorItem")
+    haveResult.classList.remove("colorItem")
+})

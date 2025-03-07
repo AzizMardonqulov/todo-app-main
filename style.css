@@ -31,6 +31,24 @@ input{
     top: 0;
     z-index: 1;
 }
+.sunLight{
+  width: 100%;
+  height: 40%;
+  background-image: url(./images/bg-desktop-light.jpg);
+  position: absolute;
+  background-size: cover;
+  top: 0;
+  z-index: 1;
+  opacity: 1;
+  animation: bg 1s ease;
+}
+@keyframes bg {
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+}
 .toDoList{
     width: 40%;
     position: relative;
@@ -254,6 +272,22 @@ input{
     transition: all 0.5s ease;
     animation: before 1s ease;
 }
+.toDoList-label-icon img{
+  cursor: pointer;
+  display: none;
+}
+.visiball{
+  display: block !important;
+  opacity: 1;
+  animation: vis 1s ease;
+}
+@keyframes vis {
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+}
 @keyframes before {
   from{
     width: 0;
@@ -265,6 +299,36 @@ input{
 .none{
   display: none;
 }
+.light{
+  background-color: #FFFFFF;
+  opacity: 1;
+  animation:light 1s ease;
+}
+.hader-bac{
+  background-color: #FAFAFA ;
+  opacity: 1;
+  animation: light 1s ease;
+}
+@keyframes light {
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+}
+.li-Light-Bac{
+  background-color: #fff;
+  box-shadow: 0px 0px 1em #494b6167;
+}
+.li-Light-Bac li{
+  background-color: #fff !important;
+  opacity: 1;
+  animation:light 1s ease ;
+}
+.colorItem{
+  color: #494b61 !important;
+}
+
 @media only screen and (max-width:1353px) {
   .toDoList{
     width: 70%;

@@ -9,17 +9,18 @@
 </head>
 <body>
 
-<div class="hader">
-  <div class="hader-bg"></div>
+<div id="hader" class="hader">
+  <div id="haderBg" class="hader-bg"></div>
   <div class="toDoList">
       <div class="toDoList-label">
         <h1>TODO</h1>
         <div class="toDoList-label-icon">
-          <img src="./images/icon-sun.svg" alt="">
+          <img id="sun" class="visiball" src="./images/icon-sun.svg" alt="">
+          <img id="moon" src="./images/icon-moon.svg" alt="">
         </div>
       </div>
       <div class="toDoList-in">
-          <div class="toDoList-in-input">
+          <div id="toDoListInput" class="toDoList-in-input">
               <div class="chec fist-chec">
                 <input name="input" type="checkbox">
                 <span class="checkmark"></span>
@@ -44,20 +45,20 @@
                 </li> 
               </ul>
           </div>
-          <div class="toDoList-in-menu">
+          <div id="toDoListMenu"  class="toDoList-in-menu">
               <div class="menu-right">
-                  <div class="haveResult" style="display: flex; gap: 0.5rem;"><div id="itemLeft"></div> items Left</div>
+                  <div id="haveResult" class="haveResult" style="display: flex; gap: 0.5rem;"><div id="itemLeft"></div> items Left</div>
               </div>
               <div class="menu-centr">
                   <ul>
                     <li>
-                      <div id="all" class="menu-items active">All</div>
+                      <div id="all" class="menu-items one active">All</div>
                     </li>
                     <li>
-                      <div id="active" class="menu-items">Active</div>
+                      <div id="active" class="menu-items two">Active</div>
                     </li>
                     <li>
-                      <div id="comp" class="menu-items">Completed</div>
+                      <div id="comp" class="menu-items three">Completed</div>
                     </li>
                   </ul>
               </div>
