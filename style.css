@@ -262,3 +262,85 @@ input{
     width: 100%;
   }
 }
+.none{
+  display: none;
+}
+@media only screen and (max-width:1353px) {
+  .toDoList{
+    width: 70%;
+  }
+}
+@media only screen and (max-width:1040px) {
+  .toDoList{
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 854px) {
+  .toDoList{
+    width: 90%;
+  } 
+}
+@media only screen and (max-width:688px) {
+  .to-in input{
+    width: 50%;
+  }
+  .input-lable{
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width:503px) {
+  .toDoList{
+    width: 90%;
+    transform: scale(1.1);
+  }
+  .menu-centr ul li div{
+    font-size: 10px;
+  }
+  .toDoList-in-result ul li p{
+    font-size: 12px;
+  }
+  .input-lable{
+    width: 40%;
+    font-size: 12px;
+  }
+  .to-in{
+    gap: 1rem;
+  }
+  .to-in input{
+    width: 60%;
+    font-size: 12px;
+  }
+  .chec input{
+    width: 18px;
+    height: 18px;
+  }
+  .chec span{
+    width: 18px;
+    height: 18px;
+  }
+  .toDoList-in-result ul li{
+    height: 40px;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  .toDoList-in-input{
+    height: 50px;
+  }
+  .fist-chec{
+    width: 18px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    top:-7px;
+  }
+  .toDoList-in-menu{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .menu-items{
+    font-size: 10px !important;
+  }
+  .toDoList-in-input {
+    padding-left: 0.5rem;
+}
+}

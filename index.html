@@ -20,7 +20,7 @@
       </div>
       <div class="toDoList-in">
           <div class="toDoList-in-input">
-              <div class="chec">
+              <div class="chec fist-chec">
                 <input name="input" type="checkbox">
                 <span class="checkmark"></span>
               </div>
@@ -32,7 +32,7 @@
           </div>
           <div class="toDoList-in-result">
               <ul id="lisHome">
-                <li>
+                 <li>
                   <div class="resul-in">
                     <div class="chec op">
                       <input id="ResultCheckbox" name="input" type="checkbox">
@@ -41,28 +41,28 @@
                     <p id="resultLable">Learning Inlish language</p>
                   </div>
                   <div class="close"><img src="./images/icon-cross.svg" alt=""></div>
-                </li>
+                </li> 
               </ul>
           </div>
           <div class="toDoList-in-menu">
               <div class="menu-right">
-                  <div class="haveResult"><div id="itemLeft"></div> items Left</div>
+                  <div class="haveResult" style="display: flex; gap: 0.5rem;"><div id="itemLeft"></div> items Left</div>
               </div>
               <div class="menu-centr">
                   <ul>
                     <li>
-                      <div class="menu-items active">All</div>
+                      <div id="all" class="menu-items active">All</div>
                     </li>
                     <li>
-                      <div class="menu-items">Active</div>
+                      <div id="active" class="menu-items">Active</div>
                     </li>
                     <li>
-                      <div class="menu-items">Completed</div>
+                      <div id="comp" class="menu-items">Completed</div>
                     </li>
                   </ul>
               </div>
               <div class="menu-left">
-                <div class="menu-items">Clear Completed</div>
+                <div id="CLearAll" class="menu-items">Clear Completed</div>
               </div>
           </div>
       </div>

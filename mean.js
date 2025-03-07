@@ -1,14 +1,18 @@
 let ResultCheckbox = document.getElementById("ResultCheckbox");
 let resultLable = document.getElementById("resultLable");
 let input1 = document.getElementById("input");
-let eror = document.getElementById("eror")
+let eror = document.getElementById("eror");
 let ul = document.getElementById("lisHome");
-let close = document.querySelector(".close")
 let itemLeft = document.getElementById("itemLeft");
-let itemLeftIn = document.querySelectorAll(".rent")
-ResultCheckbox.addEventListener('change' , function(){
-    resultLable.classList.toggle("done");
-})            
+let all = document.getElementById("all");
+let active = document.getElementById("active");
+let comp = document.getElementById("comp");
+let CLearAll = document.getElementById("CLearAll");
+function updateItemCount() {
+    let itemLeftIn = document.querySelectorAll(".rent");
+    itemLeft.innerHTML = itemLeftIn.length;
+}
+
 window.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
         if (input1.value !== "") {
@@ -43,23 +47,71 @@ window.addEventListener("keypress", function (event) {
             div3.classList.add("close");
             div3.appendChild(img);
             img.src = "./images/icon-cross.svg";
+
             newInput.addEventListener("change", function () {
                 if (newInput.checked) {
-                    newInput.classList.add("rent")
-                    itemLeft.innerHTML=itemLeftIn.length;
+                    li.classList.add("rent"); 
                 } else {
-                    newInput.classList.remove("rent")
+                    li.classList.remove("rent"); 
                 }
+                updateItemCount();
             });
+
             newInput.addEventListener("change", function () {
                 p.classList.toggle("done");
             });
+
             div3.addEventListener("click", function () {
                 li.remove();
+                updateItemCount();
             });
+
             input1.value = "";
+            updateItemCount();
         } else {
             eror.innerHTML = "Please enter a value";
         }
     }
+});
+
+active.addEventListener("click", function () {
+    all.classList.remove("active");
+    active.classList.add("active");
+    comp.c*lassList.remove("active");
+
+    document.querySelectorAll("#lisHome li").forEach((li) => {
+        if (li.classList.contains("rent")) {
+            li.style.display = "none"; 
+        } else {
+            li.style.display = "flex"; 
+        }
+    });
+});
+
+comp.addEventListener("click", function () {
+    all.classList.remove("active");
+    active.classList.remove("active");
+    comp.classList.add("active");
+
+    document.querySelectorAll("#lisHome li").forEach((li) => {
+        if (!li.classList.contains("rent")) {
+            li.style.display = "none"; 
+        } else {
+            li.style.display = "flex";
+        }
+    });
+});
+
+all.addEventListener("click", function () {
+    all.classList.add("active");
+    active.classList.remove("active");
+    comp.classList.remove("active");
+
+    document.querySelectorAll("#lisHome li").forEach((li) => {
+        li.style.display = "flex";
+    });
+});
+CLearAll.addEventListener("click", function () {
+    ul.innerHTML = "";
+    updateItemCount();
 });
