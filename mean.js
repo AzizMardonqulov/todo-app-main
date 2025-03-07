@@ -18,6 +18,7 @@ let menuItems1 = document.querySelector(".one")
 let menuItems2 = document.querySelector(".two")
 let menuItems3 = document.querySelector(".three")
 let haveResult = document.getElementById("haveResult");
+let body  = document.body;
 function updateItemCount() {
     let itemLeftIn = document.querySelectorAll(".rent");
     itemLeft.innerHTML = itemLeftIn.length;
@@ -139,6 +140,7 @@ sun.addEventListener("click" , function(){
     itemLeft.classList.add("colorItem")
     CLearAll.classList.add("colorItem")
     haveResult.classList.add("colorItem")
+    body.classList.add("bodyBac");
 })
 moon.addEventListener("click" , function(){
     sun.classList.add("visiball");
@@ -154,4 +156,5 @@ moon.addEventListener("click" , function(){
     itemLeft.classList.remove("colorItem")
     CLearAll.classList.remove("colorItem")
     haveResult.classList.remove("colorItem")
+    body.classList.remove("bodyBac")
 })
