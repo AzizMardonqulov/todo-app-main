@@ -3,22 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Todo app</title>
 </head>
 <body>
 
-  Todo
-
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
+<div class="hader">
+  <div class="toDoList">
+      <div class="toDoList-label">
+        <h1>TODO</h1>
+        <div class="toDoList-label-icon">
+          <img src="./images/icon-sun.svg" alt="">
+        </div>
+      </div>
+      <div class="toDoList-in">
+          <div class="toDoList-in-input">
+              <input name="input" type="checkbox">
+              <label for="input">Cerrently typing</label>
+              <input type="text" id="input">
+          </div>
+          <div class="toDoList-in-result">
+              <ul>
+                <li>
+                  <input type="checkbox">
+                  <p>By Milk</p>
+                  <div class="close"><img src="./images/icon-cross.svg" alt=""></div>
+                </li>
+              </ul>
+          </div>
+          <div class="toDoList-in-menu">
+              <div class="menu-right">
+                  <div class="haveResult">5 items Left</div>
+              </div>
+              <div class="menu-centr">
+                  <ul>
+                    <li>
+                      <div class="menu-items">All</div>
+                    </li>
+                    <li>
+                      <div class="menu-items">Active</div>
+                    </li>
+                    <li>
+                      <div class="menu-items">Completed</div>
+                    </li>
+                  </ul>
+              </div>
+              <div class="menu-left">
+                <div class="menu-items">Clear Completed</div>
+              </div>
+          </div>
+      </div>
+      <div class="futer-lable">Drag and drop to reorder list made by Aziz Mardonqulov</div>
+  </div>
+</div>
 
 </body>
 </html>
