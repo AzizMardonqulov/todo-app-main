@@ -198,6 +198,7 @@ input{
   .toDoList-in-result ul li p{
     font-size: 18px;
     color: #b5b7cb;
+    position: relative;
   }
 .toDoList-in-menu{
     width: 100%;
@@ -237,4 +238,27 @@ input{
 }
 .active{
     color: #6c63ff  !important;
+}
+.done{
+  position: relative;
+    color: #fff !important;
+}
+.done::before{
+    width: 100%;
+    content: "";
+    height: 2px;
+    position: absolute;
+    left: 0;
+    top: 60%;
+    background-color: #b5b7cb;
+    transition: all 0.5s ease;
+    animation: before 1s ease;
+}
+@keyframes before {
+  from{
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
 }
